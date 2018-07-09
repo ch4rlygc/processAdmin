@@ -14668,4 +14668,9 @@ fieldset {
     width: 100%;
 }
 
+.labelSpace {
+    margin: 5px 15px 5px 5px;
+}
+
+
 /* new styles */ 

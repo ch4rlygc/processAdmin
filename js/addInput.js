@@ -1,33 +1,40 @@
-$(document).ready(function() {
-	$('btnDel').attr('disabled','disabled');
-	$('btnAdd').click(function() {
-		let num = $('.clonedInput').length;
-		let newNum = new Number(num + 1);
+$(document).ready(function () {
 
-		var newElem = $('#material' + num).clone().attr('id', 'Add' + newNum);
+    $('#btnDel').attr('disabled', 'disabled');
 
-		newElem.children(':first').attr('id', 'hola' + newNum).attr('id', 'hola' + newNum);
+    var nextInput = 1;
 
-		$('#material' + num).after(newElem);
+   $("#btnAdd").click(function () {
 
-		$('btnDel').attr('disabled', false);
+      nextInput++;
 
-		if (newNum == 200) {
-			%('btnAdd').attr('disabled', 'disabled')
-		}
+      var newMaterial;
+      var newCantidad;
+      var newUnidad;
 
-	});
+       newCantidad = '<div class="col-6 col-md-4"><input type="number" style="margin-bottom: 25px;" id="cantidad_' + nextInput + '"&nbsp; name="cantidad_' + nextInput + '"&nbsp; placeholder="Cantidad" class="form-control newInput" /></div>';
+       newMaterial = '<div class="col-6 col-md-4"><input type="text" style="margin-bottom: 25px;" id="material_' + nextInput + '"&nbsp; name="material_' + nextInput + '"&nbsp; placeholder="Material / Descripción" class="form-control newInput" /></div>';
+       newUnidad = '<div class="col-6 col-md-4"><input type="text" style="margin-bottom: 25px;" id="unidad_' + nextInput + '"&nbsp; name="unidad_' + nextInput + '"&nbsp; placeholder="Unidad" class="form-control newInput" /></div>';
+       $("#listaMateriales").append(newCantidad, newMaterial,  newUnidad);
 
-	$('btnDel').click(function() {
-		var num = ('.clonedInput').length;
-		$('#material' + num).remove();
+       if (nextInput >= 2) {
+           $('#btnDel').attr('disabled', false);
+           return true;
+       }
+       if (nextInput == 1) {
+           $('#btnDel').attr('disabled', 'disabled');
+           return true ;
+       }
+       
+   });
+   
+   $("#btnDel").click(function () {
+       var num = $('.newInput').length;
+       $('#material_' + nextInput).remove();
+       $('#cantidad_' + nextInput).remove();
+       $('#unidad_' + nextInput).remove();
+       nextInput--;
+   })
 
-		$('#btnAdd').attr('disabled', false);
-
-		if (num == 1) {
-			$('#btnDel').attr('disabled', 'disabled');
-		}
-
-	});
 
 });

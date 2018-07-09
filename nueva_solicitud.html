@@ -42,7 +42,7 @@
             <div class="section__content section__content--p35">
                 <div class="header3-wrap">
                     <div class="header__logo">
-                        <a href="index5.html">
+                        <a href="dashboard.html">
                             <img src="images/icon/logo-white.png" alt="CoolAdmin" />
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="index5.html">
+                            <a class="js-arrow" href="dashboard.html">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Dashboard
                             </a>
@@ -323,12 +323,12 @@
                                     <span class="au-breadcrumb-span">Estás aquí:</span>
                                     <ul class="list-unstyled list-inline au-breadcrumb__list">
                                         <li class="list-inline-item active">
-                                            <a href="index5.html">Inicio</a>
+                                            <a href="dashboard.html">Inicio</a>
                                         </li>
                                         <li class="list-inline-item seprate">
                                             <span>/</span>
                                         </li>
-                                        <li class="list-inline-item"></li>
+                                        <li class="list-inline-item">Nueva solicitud</li>
                                     </ul>
                                 </div>
                             </div>
@@ -366,47 +366,48 @@
                                     <label class=" form-control-label">Solicitante</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <p class="form-control-static">Nombre de Usuario</p>
+                                    <p class="form-control-static">Carlos Gonzàlez</p>
                                 </div>
                             </div>
                             <label class="form-cotrol-label"><strong>Tipo de Proyecto</strong></label><br>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="text-input" class=" form-control-label">Garantía</label>
+                                    <label for="garantia" class=" form-control-label">Garantía</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                    <input type="text" id="garantia" name="garantia" placeholder="" class="form-control">
                                     <!--<small class="form-text text-muted">This is a help text</small>-->
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="text-input" class=" form-control-label">Extra</label>
+                                    <label for="extras" class=" form-control-label">Extra</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                    <input type="text" id="extras" name="text-input" placeholder="" class="form-control">
                                     <!--<small class="form-text text-muted">This is a help text</small>-->
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="text-input" class=" form-control-label">En ejecución</label>
+                                    <label class=" form-control-label">Proyecto en ejecución</label>
                                 </div>
-                                <div class="col-12 col-md-9">
-                                    <select name="select" id="select" class="form-control">
-                                        <option value="yes">Si</option>
-                                        <option value="no">No</option>
-                                    </select>
-                                    <small class="form-text text-muted">Selecciona una opción</small>
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="proyectYes" class="form-check-label labelSpace">
+                                            <input type="radio" id="proyectoEnEjecucion" name="proyectoEnEjecucion" value="proyectoEnEjecucionY" class="form-check-input">Si
+                                            <input type="radio" id="proyectoEnEjecucion" name="proyectoEnEjecucion" value="proyectoEnEjecucionN" class="form-check-input">No
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <label class="form-cotrol-label"><strong>Detalles del Proyecto</strong></label><br>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="password-input" class=" form-control-label">Nombre del Proyecto</label>
+                                    <label for="nombreProyecto" class=" form-control-label">Nombre del Proyecto</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                    <input type="text" id="nombreProyecto" name="nombreProyecto" placeholder="" class="form-control" required>
                                     <!-- <small class="help-block form-text"></small> -->
                                 </div>
                             </div>
@@ -421,19 +422,19 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="text-input" class=" form-control-label">Fecha de solicitud</label>
+                                    <label for="fechaSolicitud" class=" form-control-label">Fecha de solicitud</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                    <input type="date" id="fechaSolicitud" name="fechaSolicitud" placeholder="" class="form-control">
                                     <!--<small class="form-text text-muted">This is a help text</small>-->
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="disabled-input" class=" form-control-label">Fecha de Entrega</label>
+                                    <label for="fechaEntrega" class=" form-control-label">Fecha de Entrega</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="disabled-input" name="disabled-input" placeholder="Disabled" disabled="" class="form-control">
+                                    <input type="text" id="fechaEntrega" name="fechaEntrega" placeholder="" disabled="" class="form-control">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -445,21 +446,40 @@
                                 </div>
                             </div>
                             <label class="form-cotrol-label"><strong>Ingresa los materiales que solicitas</strong></label><br>
-                            <div class="row form-group clonedInput" id="input1">
-                                <div class="col-6 col-md-6"     >
-                                    <input type="text" id="material1" name="material1" placeholder="Material" class="form-control">
+                            <div class="row form-group" id="listaMateriales">
+                                <div class="col-6 col-md-4">
+                                    <input type="number" id="cantidad_1" name="cantidad_1" placeholder="Cantidad" class="form-control">
                                 </div>
-                                <div class="col-6 col-md-6">
-                                    <input type="text" id="cantidad1" name="cantidad1" placeholder="Cantidad" class="form-control">
+                                <div class="col-6 col-md-4">
+                                    <input type="text" id="material_1" name="material_1" placeholder="Material / Descripción" class="form-control">
+                                    <br>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <input type="text" id="unidad_1" name="unidad_1" placeholder="Unidad" class="form-control">
                                     <br>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-secondary space-buttons" id="btnAdd">
+                            <div style="text-align: center"><h5>Última Linea</h5></div>
+                            <button type="button" class="btn btn-primary space-buttons" id="btnAdd">
                                 <i class="fa fa-plus"></i>&nbsp; Material
                             </button> 
                             <button type="button" class="btn btn-danger space-buttons" id="btnDel">
                                 <i class="fa fa-trash"></i>&nbsp; Material
                             </button>
+                            <br><br>
+                            <div class="row form-group">
+                                <div class="col-12 col-md-12">
+                                    <label for="textarea-input" class=" form-control-label">Observaciones</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Ingresa observaciones o comentarios acerca de la nueva solicitud" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md6 sendButton" style="text-align: center;">
+                                <button type="button" class="btn btn-success space-buttons" id="sendForm">
+                                    <i class="fa fa-rocket"></i>&nbsp; Enviar Solicitud de Materiales
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -507,7 +527,7 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
-    <script src="js/addInput2.js"></script>
+    <script src="js/addInput.js"></script>
 
 </body>
 
