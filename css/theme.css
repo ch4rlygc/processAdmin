@@ -14671,6 +14671,8 @@ fieldset {
 .labelSpace {
     margin: 5px 15px 5px 5px;
 }
-
+.notificationCard {
+    margin-right: 50px;
+}
 
 /* new styles */ 

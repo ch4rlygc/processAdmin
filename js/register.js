@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 				alert('Nuevo usuario registrado con éxito');
 
-				location.href="index.html";
+				location.href('./index.html');
 			}
 
 			storeData();
