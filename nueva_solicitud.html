@@ -323,18 +323,26 @@
                                 <div class="col col-md-3">
                                     <label for="garantia" class=" form-control-label">Garantía</label>
                                 </div>
-                                <div class="col-12 col-md-9">
-                                    <input type="text" id="garantia" name="garantia" placeholder="" class="form-control">
-                                    <!--<small class="form-text text-muted">This is a help text</small>-->
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="proyectYes" class="form-check-label labelSpace">
+                                            <input type="radio" id="garantiaY" name="garantia" value="garantiaY" class="form-check-input">Si
+                                            <input type="radio" id="garantiaN" name="garantia" value="garantiaN" class="form-check-input">No
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="extras" class=" form-control-label">Extra</label>
                                 </div>
-                                <div class="col-12 col-md-9">
-                                    <input type="text" id="extras" name="text-input" placeholder="" class="form-control">
-                                    <!--<small class="form-text text-muted">This is a help text</small>-->
+                                <div class="col col-md-9">
+                                    <div class="form-check-inline form-check">
+                                        <label for="proyectYes" class="form-check-label labelSpace">
+                                            <input type="radio" id="extraY" name="extra" value="extraY" class="form-check-input">Si
+                                            <input type="radio" id="extraN" name="extra" value="extraN" class="form-check-input">No
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -383,7 +391,7 @@
                                     <label for="fechaEntrega" class=" form-control-label">Fecha de Entrega</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="fechaEntrega" name="fechaEntrega" placeholder="" disabled="" class="form-control">
+                                    <input type="date" id="fechaEntrega" name="fechaEntrega" placeholder="" class="form-control">
                                 </div>
                             </div>
                             <div class="row form-group">
